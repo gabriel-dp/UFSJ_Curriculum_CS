@@ -2,12 +2,11 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import curriculumData from '../utils/curriculumData';
+import Header from '../components/Header';
 import Semester from '../components/Semester';
 import Subject from '../components/Subject';
 
 const CurriculumPage = styled.div`
-	margin: 1rem;
-	background-color: ghostwhite;
 	display: flex;
 	flex-direction: row;
 	gap: 1rem;
@@ -38,28 +37,31 @@ const Curriculum = () => {
 	}, [curriculum])
 
 	return (
-		<CurriculumPage>
-			{
-				[...Array(semesters)].map((semester, index) => (
-					<Semester key={index}>
-						{
-							Object.keys(curriculum).map((subject) => {
-								if (curriculum[subject]['semester'] === index+1) {
-									return (
-										<Subject
-											key={subject}
-											curriculum={curriculum}
-											name={subject}
-											changeCompleted={changeCompleted}
-										/>
-									);
-								}
-							})
-						}
-					</Semester>
-				))
-			}
-		</CurriculumPage>
+		<>
+			<Header title={'UFSJ - Grade Curricular'} subtitle={'Ciência da Computação'}/>
+			<CurriculumPage>
+				{
+					[...Array(semesters)].map((semester, index) => (
+						<Semester key={index}>
+							{
+								Object.keys(curriculum).map((subject) => {
+									if (curriculum[subject]['semester'] === index+1) {
+										return (
+											<Subject
+												key={subject}
+												curriculum={curriculum}
+												name={subject}
+												changeCompleted={changeCompleted}
+											/>
+										);
+									}
+								})
+							}
+						</Semester>
+					))
+				}
+			</CurriculumPage>
+		</>
 	);
 }
 

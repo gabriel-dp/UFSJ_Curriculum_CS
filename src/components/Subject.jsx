@@ -28,7 +28,7 @@ const SubjectArea = styled.div`
 
 const SubjectName = styled.h3`
     font-size: 0.75rem;
-    font-weight: bold;
+    font-weight: lighter;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
     text-decoration: ${props => props.completed ? 'line-through' : 'none'};
