@@ -6,13 +6,11 @@ import Semester from '../components/Semester';
 import Subject from '../components/Subject';
 
 const CurriculumPage = styled.div`
-	margin-top: 1rem;
-	width: 100%;  
+	margin: 1rem;
 	background-color: ghostwhite;
 	display: flex;
 	flex-direction: row;
 	gap: 1rem;
-	justify-content: center;
 `;
 
 const Curriculum = () => {
