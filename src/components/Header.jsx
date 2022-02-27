@@ -7,14 +7,17 @@ const HeaderArea = styled.div`
     align-items: center;
     user-select: none;
 
-    :hover {
-        h2 {
-            letter-spacing: 0.2rem;
+    @media (min-width: 750px) {
+        :hover {
+            h2 {
+                letter-spacing: 0.2rem;
+            }
         }
     }
 `;
 
 const Title = styled.h1`
+    text-align: center;
     font-size: 3rem;
 `;
 

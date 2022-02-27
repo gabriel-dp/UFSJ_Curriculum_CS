@@ -8,17 +8,15 @@ const SubjectArea = styled.div`
     background-color: ${props => props.completed ? props.color+'CC' : props.color};
     padding: 1rem 2.5rem 1rem 1rem;
     border-radius: 1rem;
-    border:  ${props => props.completed ? 'none' : '0.1rem solid'};
+    border:  ${props => props.completed ? '1px transparent solid' : '1px #333 solid'};
     user-select: none;
     cursor: pointer;
     transition: all 0.25s ease;
     position: relative;
-
     filter: ${props => props.completed ? 'saturate(75%)' : 'none'};
 
     :hover {
         filter: drop-shadow(0 0 0.25rem ${props => props.color}) brightness(92.5%);
-
         .lock {
             font-size: 1rem;
             color: #333;
@@ -26,9 +24,9 @@ const SubjectArea = styled.div`
     }
 `;
 
-const SubjectName = styled.h3`
+const SubjectName = styled.h4`
     font-size: 0.75rem;
-    font-weight: lighter;
+    font-weight: normal;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
     text-decoration: ${props => props.completed ? 'line-through' : 'none'};

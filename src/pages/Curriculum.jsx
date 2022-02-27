@@ -7,9 +7,11 @@ import Semester from '../components/Semester';
 import Subject from '../components/Subject';
 
 const CurriculumPage = styled.div`
+	max-width: 100%;
 	display: flex;
 	flex-direction: row;
 	gap: 1rem;
+	overflow-x: scroll;
 `;
 
 const Curriculum = () => {
@@ -32,17 +34,13 @@ const Curriculum = () => {
 		setCurriculum(newCurriculum);
 	}
 
-	useEffect(() => {
-		//modded
-	}, [curriculum])
-
 	return (
 		<>
 			<Header title={'UFSJ - Grade Curricular'} subtitle={'Ciência da Computação'}/>
 			<CurriculumPage>
 				{
 					[...Array(semesters)].map((semester, index) => (
-						<Semester key={index}>
+						<Semester key={index} index={index}>
 							{
 								Object.keys(curriculum).map((subject) => {
 									if (curriculum[subject]['semester'] === index+1) {

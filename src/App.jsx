@@ -8,6 +8,7 @@ const Screen = styled.div`
 	padding: 1rem 2rem;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 `;
 
 function App() {
