@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 import { FaLock } from 'react-icons/fa'
 
@@ -50,19 +50,13 @@ const Subject = ({ curriculum, name, changeCompleted }) => {
     const [completed, setCompleted] = useState();
     const [dependent, setDependent] = useState();
 
-    useEffect(() => {
-        setCompleted(subject['completed']);
-        setColor(subject['color']);
-        setDependent(hasActiveDependencies());
-    }, [curriculum]);
-
-    function hasActiveDependencies () {
+    const hasActiveDependencies = useCallback(() => {
         let activeDependencies = false;
         subject['dependencies'].forEach((dependency) => {
             if (!curriculum[dependency]['completed']) activeDependencies = true;
         })
         return activeDependencies;
-    }
+    }, [curriculum, subject])
     
     function handleSubjectClick () {
         let allowChangeComplete = true;
@@ -78,9 +72,15 @@ const Subject = ({ curriculum, name, changeCompleted }) => {
                 }
             })
         }
-
+        
         if (allowChangeComplete) changeCompleted(name);
     }
+
+    useEffect(() => {
+        setCompleted(subject['completed']);
+        setColor(subject['color']);
+        setDependent(hasActiveDependencies());
+    }, [curriculum, subject, hasActiveDependencies]);
 
     return (
         <SubjectArea 

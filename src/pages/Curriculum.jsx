@@ -53,6 +53,7 @@ const Curriculum = () => {
 											/>
 										);
 									}
+									return (null);
 								})
 							}
 						</Semester>
