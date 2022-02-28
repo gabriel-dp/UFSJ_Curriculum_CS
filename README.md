@@ -10,7 +10,7 @@ The user can click on each subject to complete it, but only if it has no active 
 
 ## Screenshot
 
-<img width=100% src='./docs/screenshot.png'>
+<img width=100% src='./cover/cover.png'>
 
 <br>
 
