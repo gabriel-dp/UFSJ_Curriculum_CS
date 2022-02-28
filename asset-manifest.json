@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/UFSJ_Curriculum_CS/static/js/main.6cc94baa.js",
+    "main.js": "/UFSJ_Curriculum_CS/static/js/main.eafc2fbc.js",
     "index.html": "/UFSJ_Curriculum_CS/index.html",
-    "main.6cc94baa.js.map": "/UFSJ_Curriculum_CS/static/js/main.6cc94baa.js.map"
+    "main.eafc2fbc.js.map": "/UFSJ_Curriculum_CS/static/js/main.eafc2fbc.js.map"
   },
   "entrypoints": [
-    "static/js/main.6cc94baa.js"
+    "static/js/main.eafc2fbc.js"
   ]
 }
