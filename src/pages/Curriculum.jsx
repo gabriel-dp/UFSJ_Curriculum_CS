@@ -5,6 +5,7 @@ import curriculumData from '../utils/curriculumData';
 import Header from '../components/Header';
 import Semester from '../components/Semester';
 import Subject from '../components/Subject';
+import Footer from '../components/Footer';
 
 const CurriculumPage = styled.div`
 	max-width: 100%;
@@ -12,6 +13,7 @@ const CurriculumPage = styled.div`
 	flex-direction: row;
 	gap: 1rem;
 	overflow-x: scroll;
+	padding-bottom: 1rem;
 `;
 
 const Curriculum = () => {
@@ -60,6 +62,7 @@ const Curriculum = () => {
 					))
 				}
 			</CurriculumPage>
+			<Footer/>
 		</>
 	);
 }
