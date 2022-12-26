@@ -26,7 +26,7 @@ const Footer = () => {
     return (
         <FooterArea>
             <Divisory/>
-            <FooterText>Made by <a href='https://github.com/gabrieldp23' target='_blank' rel="noreferrer">Gabriel de Paula</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href='https://github.com/gabrieldp23/UFSJ_Curriculum_CS' target='_blank' rel="noreferrer">View project source code</a></FooterText>
+            <FooterText>Made by <a href='https://github.com/gabriel-dp' target='_blank' rel="noreferrer">Gabriel de Paula</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href='https://github.com/gabrieldp23/UFSJ_Curriculum_CS' target='_blank' rel="noreferrer">View project source code</a></FooterText>
         </FooterArea>
     );
 }

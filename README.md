@@ -18,7 +18,7 @@ The user can click on each subject to complete it, but only if it has no active 
 
 ```bash
 # Clone
-git clone https://github.com/gabrieldp23/UFSJ_Curriculum_CS.git
+git clone https://github.com/gabriel-dp/UFSJ_Curriculum_CS.git
 
 # Node modules
 npm install

@@ -2,7 +2,7 @@
   "name": "ufsj-ccomp",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://gabrieldp23.github.io/UFSJ_Curriculum_CS",
+  "homepage": "https://gabriel-dp.github.io/UFSJ_Curriculum_CS",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
